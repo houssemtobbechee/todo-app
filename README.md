@@ -58,21 +58,23 @@ A feature-rich to-do list application built with ReactJS. This app provides a se
 
 ## 📂 File Structure
 
+```bash
 todo-app/
 ├── src/
-│ ├── components/
-│ │ ├── TaskCard.js # Component for displaying individual tasks
-│ ├── App.js # Main component managing state and logic
-│ ├── TaskForm.js # Component for task creation and editing
-│ ├── TaskList.js # Component for rendering the task list
-│ ├── index.js # React entry point
-│ └── index.css # Global styles
+│   ├── components/
+│   │   └── TaskCard.js    # Component for displaying individual tasks
+│   ├── App.js             # Main component managing state and logic
+│   ├── TaskForm.js        # Component for task creation and editing
+│   ├── TaskList.js        # Component for rendering the task list
+│   ├── index.js           # React entry point
+│   └── index.css          # Global styles
 ├── public/
-│ ├── index.html # HTML template
-│ └── favicon.ico # Application icon
-├── .gitignore # Git ignore rules
-├── package.json # Project metadata and dependencies
-└── README.md # This file
+│   ├── index.html         # HTML template
+│   └── favicon.ico        # Application icon
+├── .gitignore             # Git ignore rules
+├── package.json           # Project metadata and dependencies
+└── README.md              # This file
+```
 
 ## 🤝 Contributing
 
