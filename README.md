@@ -62,11 +62,14 @@ todo-app/
 ├── src/
 │   ├── components/
 │   │   └── TaskCard.js    # Component for displaying individual tasks
+│   ├── pages/
+│   │   └── Home.js        # Page component for the home view
+│   ├── styles/
+│   │   └── GlobalStyles.js # Global styles for the application
 │   ├── App.js             # Main component managing state and logic
 │   ├── TaskForm.js        # Component for task creation and editing
 │   ├── TaskList.js        # Component for rendering the task list
-│   ├── index.js           # React entry point
-│   └── index.css          # Global styles
+│   └── index.js           # React entry point
 ├── public/
 │   ├── index.html         # HTML template
 │   └── favicon.ico        # Application icon
