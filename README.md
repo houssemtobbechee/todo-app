@@ -54,7 +54,6 @@ A feature-rich to-do list application built with ReactJS. This app provides a se
 - **Editing a Task**: Click "Edit" on the task, modify the details, and click "Update Task."
 - **Deleting a Task**: Click "Delete" on the task you wish to remove.
 - **Marking as Complete**: Toggle the task's completion status with "Mark as Complete."
-- **Filtering Tasks**: Use the filter options to sort tasks by their status.
 
 ## 📂 File Structure
 
