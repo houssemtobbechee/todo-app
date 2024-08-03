@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TaskForm from './TaskForm';
+import TaskList from './TaskList';
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+  const [editingTask, setEditingTask] = useState(null); // State for the task being edited
+
+  const addTask = (task) => {
+    if (editingTask) {
+      setTasks(tasks.map(t => t.id === editingTask.id ? { ...task, id: editingTask.id } : t));
+      setEditingTask(null);
+    } else {
+      setTasks([...tasks, { ...task, id: Date.now() }]); // Add new task with unique ID
+    }
+  };
+
+  const editTask = (task) => {
+    setEditingTask(task);
+  };
+
+  const deleteTask = (task) => {
+    setTasks(tasks.filter(t => t.id !== task.id));
+  };
+
+  const toggleComplete = (task) => {
+    setTasks(tasks.map(t => t.id === task.id ? { ...t, completed: !t.completed } : t));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TaskForm addTask={addTask} editingTask={editingTask} />
+      <TaskList tasks={tasks} onEdit={editTask} onDelete={deleteTask} onToggleComplete={toggleComplete} />
     </div>
   );
-}
+};
 
 export default App;
